@@ -1,0 +1,16 @@
+DFS
+
+DFS(G, start):
+    Input: Graph G(V, E), starting node 'start'
+    Output: Visit all nodes reachable from 'start'
+
+    Create a boolean array visited[] of size V, initialized to false
+    Call DFS_Visit(start, visited)
+
+DFS_Visit(node, visited):
+    Mark visited[node] = true
+    Print or process node
+
+    For each neighbor in G[node]:
+        If visited[neighbor] is false:
+            Call DFS_Visit(neighbor, visited)
