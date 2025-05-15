@@ -1,0 +1,20 @@
+BFS
+
+BFS(G, start):
+    Input: Graph G(V, E), starting node 'start'
+    Output: Visit all nodes reachable from 'start'
+
+    Create a boolean array visited[] of size V, initialized to false
+    Create an empty queue Q
+
+    Enqueue start into Q
+    Mark visited[start] = true
+
+    While Q is not empty:
+        node = Dequeue from Q
+        Print or process node
+
+        For each neighbor in G[node]:
+            If visited[neighbor] is false:
+                Enqueue neighbor into Q
+                Mark visited[neighbor] = true
